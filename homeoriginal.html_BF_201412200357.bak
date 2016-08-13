@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Musician</title>
+
+    <link rel="stylesheet" type="text/css" href="Content/Office.css" />
+
+    <!-- Add your CSS styles to the following file -->
+    <link rel="stylesheet" type="text/css" href="Content/App.css" />
+
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <script src="https://az88874.vo.msecnd.net/api/1.0/office.js"></script>
+
+    <script type="text/javascript">
+   	function appendMessage(mytext) {
+            //var oNewP = document.createElement("div");
+            //var oText = document.createTextNode(mytext);
+            //oNewP.appendChild(oText);
+            //debugDiv = document.getElementById("overlay");
+            //debugDiv.appendChild(oNewP);
+	    document.getElementById("overlay").innerHTML = document.getElementById("overlay").innerHTML.concat("<br>" + mytext);
+    	}
+	function replaceMessage(mytext){
+	    document.getElementById("overlay").innerHTML = mytext;
+	}
+        function appendMusic(noteName){
+            var newcontent = document.createElement("div");
+            newcontent.innerHTML="<audio src='Content/" + noteName + ".mp3' autoplay style='visibility:hidden;' controls='' preload='auto' autobuffer></audio>";
+            musicDiv=document.getElementById("music");
+            while (newcontent.firstChild)
+            { 
+                musicDiv.appendChild(newcontent.firstChild); 
+            }
+        }
+	function clearMusic(){
+	    musicDiv=document.getElementById("music");
+	    for(newcontent in musicDiv){
+		musicDiv.removeChild(newcontent);
+	    }
+	}
+        
+    </script>
+    <!-- Add your JavaScript to the following file -->
+    <script src="Scripts/App.js"></script>
+</head>
+<body>
+    <!-- Replace the following with your content -->
+    <div id="Content">
+        <input type="button" value="Set data" id="setDataBtn" style="margin-right: 10px; padding: 0px; width: 100px;" />
+        <input type="button" value="Get data" id="getDataBtn" style="padding: 0px; width: 100px;" />
+        <input type="button" value="Set Binding" onclick="setBinding();" id="setDataBtn" style="padding: 0px; width: 100px;" />
+        <input type="button" value="Create Table" onclick="createTable();" id="createTable" style="padding: 0px; width: 100px;" />
+        <input type="button" value="Write Notes Data" onclick="writeNotesData();" id="writeNotesData" style="padding: 0px; width: 100px;" />
+        <input type="button" value="Play note" onclick="playSound();" id="playsound" style="padding: 0px; width: 100px;" />
+        <input type="button" value="Start Song" onclick="startSong();" id="startsong" style="padding: 0px; width: 100px;" />
+	<input type="button" value="Stop Song" onclick="stopSong();" id="stopsong" style="padding: 0px; width: 100px;" />
+        <input type="text" value="Sample Datamo" id="selectedDataTxt" style="margin-top: 10px; width: 210px" />
+        <audio src="Content/C4.mp3" autoplay style="visibility:hidden;" controls="" preload="auto" autobuffer></audio>
+    </div>
+    <div id="overlay" style="position:fixed; height:70%; width:42%; visibility:visible; background:#000; opacity:0.5; z-index:10; bottom:0; right:0; color:white">
+        Debug
+        <button onclick="myTest2();">MyTest</button>
+    </div>
+    <div id="music">
+        
+    </div>
+<div style="position:absolute;filter:alpha(opacity=0);opacity:0.001;z-index:10;"> <a href="http://www.grasscats.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.reinsinmotion.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.honoluluprosecutor.com/"><b>jordan 13 black infrared</b></a> <a href="http://www.docart.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.lumber.ca/"><b>legend blue 11s</b></a> <a href="http://anewseasongroup.com/"><b>legend blue 11s</b></a> <a href="http://www.arizonawindsymphony.org/"><b>legend blue 11s</b></a> <a href="http://www.majorhacking.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.downeylawllc.com/"><b>legend blue 11s</b></a> <a href="http://www.hayhollowstables.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.geminimg.com/"><b>jordan 13 black red</b></a> <a href="http://www.alexlperson.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.twinoakspress.com/"><b>jordan 13 black red</b></a> <a href="http://co-creativesynergy.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.bait-consulting.com/"><b>black infrared 13s</b></a> <a href="http://www.slr.aero/"><b>legend blue 11s</b></a> <a href="http://www.essexlibrary.org/"><b>jordan 11 legend blue</b></a> <a href="http://www.neuhauslabs.com/"><b>legend blue 11s</b></a> <a href="http://leehunterarchitect.com/"><b>jordan 11 legend blue</b></a> <a href="http://familleterrienne.org/"><b>jordan 11 legend blue</b></a> <a href="http://heartfeltcalling.org/"><b>jordan 11 legend blue</b></a> <a href="http://www.jtsbrickovenpizza.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.bahaiprayers.ca/"><b>legend blue 11s</b></a> <a href="http://www.carolinasikhs.org/"><b>legend blue 11s</b></a> <a href="http://www.guardianbuilding.com/"><b>legend blue 11s</b></a> <a href="http://laarbo.net/"><b>jordan 13 black infrared 23</b></a> <a href="http://odelltrailers.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.mypetropolis.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.calvinmartin.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.bahaiprayers.ca/"><b>jordan 11 legend blue</b></a> <a href="http://www.venture-sandiego.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.bcdelinquenttaxes.com/"><b>black infrared 23 13s</b></a> <a href="http://www.talksite.org/"><b>legend blue 11s</b></a> <a href="http://www.groupesoutiere.com/"><b>jordan 11 legend blue</b></a> <a href="http://themttc.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.starmedix.com/"><b>jordan 13 black infrared 23</b></a> <a href="http://www.twinoakspress.com/"><b>black infrared 23 13s</b></a> <a href="http://www.noahmclaurine.com/"><b>legend blue 11s</b></a> <a href="http://www.hvac-dispatch-software.com/"><b>jordan 11 legend blue</b></a> <a href="http://www.bcdelinquenttaxes.com/"><b>jordan 13 black infrared</b></a> <a href="http://www.dianneramponi.com/"><b>michael kors black friday</b></a> <a href="http://www.salmoncreeksnow.org/"><b>michael kors black friday</b></a> <a href="http://griotcircle.org"><b>michael kors Black Friday</b></a> <a href="http://www.proactiveitsystems.com/"><b>michael kors black friday</b></a> <a href="http://www.brookvillechamber.com/"><b>beats by dre cyber monday</b></a> <a href="http://mojmalipravnik.net"><b>coach black friday</b></a> <a href="http://www.seafairboatclub.org/"><b>canada goose black friday</b></a> <a href="http://www.eatrightmich.org/"><b>canada goose cyber Monday</b></a> <a href="http://www.springhilllighting.com/"><b>lululemon cyber monday</b></a> <a href="http://www.ashlandculturalcouncil.org/"><b>lululemon cyber monday</b></a> <a href="http://www.flighthike.com/"><b>kate spade cyber monday</b></a> <a href="http://www.cmarmitage.com"><b>burberry cyber monday</b></a> <a href="http://www.mtitv.com"><b>Oakley black friday</b></a> <a href="http://www.gallerypropertiesofdubuque.com/"><b>victoria's secret cyber monday</b></a> <a href="http://www.feelingsassy.com"><b>tory burch cyber monday</b></a> <a href="http://www.azemergencymechanical.com"><b>victoria's secret black friday</b></a> <a href="http://www.adamandevecosmetology.com"><b>jordan black friday</b></a> <a href="http://www.redsparowes.com/"><b>coach cyber Monday</b></a> <a href="http://www.seymour-pd.com/"><b>michael kors black friday</b></a> <a href="http://www.artisanvoice.com/"><b>north face black friday</b></a> <a href="http://www.mapilots.org/"><b>coach black Friday</b></a> <a href="http://www.applewindowcleaning.com/"><b>kate spade black friday</b></a> <a href="http://www.lpiho.com/"><b>north face cyber Monday</b></a> <a href="http://elegantlyiced.com/"><b>coach cyber monday</b></a> <a href="http://www.shawsbarbecue.com/"><b>north face cyber Monday</b></a> <a href="http://www.wilmheadstart.org/"><b>canada goose cyber Monday</b></a> <a href="http://www.cibservice.com/"><b>beats by dre cyber Monday</b></a> <a href="http://www.dyaa.net/"><b>coach cyber monday</b></a> <a href="http://raisedvisualmedia.com/"><b>north face black Friday</b></a> <a href="http://www.affinityeventsolutions.com/"><b>north face cyber Monday</b></a> <a href="http://www.lasirenagrill.com/"><b>moncler black friday</b></a> <a href="http://www.advantechva.org/"><b>michael kors cyber monday</b></a> <a href="http://whalingcityfestival.com/"><b>michael kors cyber monday</b></a> <a href="http://www.mspasf.com/"><b>beats by dre cyber Monday</b></a> <a href="http://www.alternativefoot.com/"><b>michael kors black Friday</b></a> <a href="http://www.janeadenymemorialschool.com"><b>michael kors cyber monday</b></a> <a href="http://www.evomailserver.com/"><b>uggs black friday</b></a> <a href="http://www.nbpcitizensacademy.org/"><b>the north face black friday</b></a> <a href="http://www.sbe14.com/"><b>beats by dre black Friday</b></a> <a href="http://www.practicalchristianitystlouis.com/"><b>kate spade cyber monday</b></a> <a href="http://www.rcitech.com/"><b>Mulberry black friday</b></a> <a href="http://elkhartmunicipalband.com/"><b>north face black friday</b></a> <a href="http://www.crossfirefencing.com/"><b>kate spade black friday</b></a> <a href="http://spindlerlaw.com/"><b>beats by dre cyber Monday</b></a> <a href="http://cyberlightcomics.com/"><b>north face cyber monday</b></a> <a href="http://troysecuritysolutions.com/"><b>kate spade black friday</b></a> <a href="http://www.warfieldpointpark.com/"><b>beats by dre cyber Monday</b></a> <a href="http://www.eatrightmich.org/"><b>canada goose cyber monday</b></a> <a href="http://sakealbany.com/"><b>uggs cyber monday</b></a> <a href="http://www.legalsolutionasap.com/"><b>Herve Leger cyber monday</b></a> <a href="http://www.ac-stl.com/"><b>tory burch black Friday</b></a> <a href="http://www.presidentsgraves.com/"><b>north face cyber monday</b></a> <a href="http://www.ghosttowngunslingers.com/"><b>bose black friday</b></a> <a href="http://cpgeosystems.com/"><b>lululemon black friday</b></a> <a href="http://www.turkeycreekgolf.com/"><b>Polo Ralph Lauren cyber monday</b></a> <a href="http://www.thecrossandthecontroller.com/"><b>coach cyber monday</b></a> <a href="http://www.pddesign.com/"><b>Miumiu black Friday</b></a> <a href="http://www.pddesign.com/"><b>Versace cyber Monday</b></a> <a href="http://www.pddesign.com/"><b>Versace cyber Monday</b></a> <a href="http://www.nbpcitizensacademy.org/"><b>north face cyber monday deals</b></a> <a href="http://www.lasirenagrill.com"><b>moncler cyber monday</b></a> <a href="http://www.potreropt.com/"><b>michael kors black Friday</b></a> <a href="http://parkersoutfitting.com/"><b>Juicy Couture cyber monday</b></a> <a href="http://www.everettlibrary.org"><b>moncler cyber monday</b></a> <a href="http://www.oceanbeachphotos.com/"><b>Hollister black Friday</b></a> <a href="http://www.santancrownrotaryclub.com/"><b>michael kors cyber Monday</b></a> <a href="http://www.walaser.com/"><b>lululemon cyber monday</b></a> <a href="http://www.daveedwardsevents.com/"><b>uggs cyber monday</b></a> <a href="http://www.newenergyfarms.com/"><b>tod's black friday</b></a> <a href="http://www.newenergyfarms.com/"><b>tod's black friday</b></a> <a href="http://raisedvisualmedia.com/"><b>the north face black friday</b></a> <a href="http://www.occda.net/"><b>lululemon black friday</b></a> <a href="http://www.cornerstonelynchburg.com/"><b>canada goose black friday</b></a> <a href="http://intrass.com/"><b>kate spade cyber monday</b></a> <a href="http://bookforward.net/"><b>canada goose cyber monday</b></a> <a href="http://www.blaumane.com"><b>North Face Black Friday</b></a> <a href="http://www.hilltoplnc.org/"><b>uggs on sale</b></a> <a href="http://www.adcadvisory.com/"><b>michael kors black Friday</b></a> <a href="http://www.foursquarebar.com/"><b>jordan 6 black infrared</b></a> <a href="http://www.gensysresearch.com/"><b>beats by dre cheap</b></a> <a href="http://www.adcadvisory.com/"><b>michael kors cyber monday</b></a> <a href="http://countrysideplumbing.com/"><b>uggs black Friday</b></a> <a href="http://www.makelifebettermeetings.com/"><b>michael kors cyber monday</b></a> <a href="http:/www.johnstonbuilders.com/"><b>hollister black friday</b></a> <a href="http://www.mhmsoftware.com/"><b>coach black Friday</b></a> <a href="http://www.nhaccounting.net/"><b>uggs black friday</b></a> <a href="http://www.stjohnchurchnj.com/"><b>michael kors cyber monday</b></a> <a href="http://www.vulaboratory.net/"><b>lululemon black friday</b></a> <a href="http://www.sixseasonsinc.com/"><b>hollister cyber monday</b></a> <a href="http://www.swvanwtf.com/"><b>gucci cyber monday</b></a> <a href="http://www.moms4more.org/"><b>uggs cyber monday</b></a> <a href="http://www.thegeorgi.com/"><b>uggs cyber monday</b></a> <a href="http://www.churchmousemedia.com/"><b>true religion black friday</b></a> <a href="http://www.nafi.com/"><b>uggs cyber monday</b></a> <a href="http://www.planetskills.com/"><b>kate spade black friday</b></a> <a href="http://www.stjohnchurchnj.com/"><b>michael kors cyber monday</b></a></div></body>
+</html>

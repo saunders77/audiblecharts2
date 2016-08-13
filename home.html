@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <title>Audible Charts</title>
+	
+	<!--
+    <link rel="stylesheet" type="text/css" href="Office.css" /> -->
+
+    <!-- Add your CSS styles to the following file -->
+    <link rel="stylesheet" type="text/css" href="Content/App.css" />
+     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.6.2.min.js"></script>
+    <script src="https://appsforoffice.microsoft.com/lib/1.0/hosted/office.js"></script>
+
+    <script type="text/javascript">
+   	function appendMessage(mytext) {
+            //var oNewP = document.createElement("div");
+            //var oText = document.createTextNode(mytext);
+            //oNewP.appendChild(oText);
+            //debugDiv = document.getElementById("overlay");
+            //debugDiv.appendChild(oNewP);
+	    if(document.getElementById("overlay").innerHTML.length > 360)
+	    {
+		replaceMessage(mytext);
+	    }
+	    else
+	    {
+		document.getElementById("overlay").innerHTML = document.getElementById("overlay").innerHTML.concat("<br>" + mytext);
+	    }
+	    
+    	}
+	function replaceMessage(mytext){
+	    document.getElementById("overlay").innerHTML = mytext;
+	}
+        function appendMusic(noteName){
+            var newcontent = document.createElement("div");
+            newcontent.innerHTML="<audio src='Content/" + noteName + ".mp3' autoplay style='visibility:hidden;' controls='' preload='auto' volume='0' autobuffer></audio>";
+            musicDiv=document.getElementById("music");
+            while (newcontent.firstChild)
+            { 
+                musicDiv.appendChild(newcontent.firstChild); 
+            }
+        }
+	function clearMusic(){
+	    musicDiv=document.getElementById("music");
+	    for(newcontent in musicDiv){
+		musicDiv.removeChild(newcontent);
+	    }
+	}
+        
+    </script>
+    <!-- Add your JavaScript to the following file -->
+    <script src="App.js"></script>
+	<style type="text/css">
+	.auto-style1 {
+		text-align: center;
+	}
+	.auto-style2 {
+		font-size: x-large;
+	}
+	.auto-style3 {
+		color: #FFFFFF;
+		font-size: small;
+	}
+	.auto-style4 {
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	}
+	.auto-style5 {
+		color: #FFFFFF;
+		font-size: small;
+		font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	}
+	.auto-style6 {
+		border-width: 0;
+	}
+	.auto-style7 {
+		text-align: center;
+	}
+}
+	</style>
+</head>
+<body style="padding: 0px; margin: 0px; background-image: url('Content/sneezing.jpg'); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+    
+	    <div id="transparencye" onclick="vanishErrors();" style="text-align:center; padding:0px; z-index:5; visibility:hidden; margin: 0px; background: black; opacity:0.55; position:fixed; height:200%; width:200%">
+		
+		</div>
+			
+		<div id="transparencyd" onclick="hideHelp();" style="text-align:center; padding: 0px; z-index:5; visibility:hidden; margin: 0px; background: black; opacity:0.55; position:fixed; height:200%; width:200%">
+			
+		</div>
+	<div class="auto-style1">
+		<div id="errors" class="auto-style1" onclick="vanishErrors();" style="visibility:hidden; vertical-align:middle; font-size:large; text-align:center; top:40%; height:10%; width:100%; position:fixed; background-color:#DDDDDD; color:#000000; opacity:1.0; z-index:9; left: 0px;">
+				<br><span class="auto-style4">This is the first error.</span>
+		</div>
+		
+		<div id="helpd" class="auto-style7" onclick="hideHelp();" style="padding: 7px; visibility:hidden; vertical-align:middle; padding-left:3%; padding-right:3% ;font-size:small; text-align:left; top:8%; height:84%; width:94%; position:fixed; background-color:#DDDDDD; color:#000000; opacity:0.9; z-index:10; left: 0px;">
+			<h3>About Audible Charts</h3>
+			<p>
+				This app for Excel uses musical notes to play normal numerical data in your spreadsheet.
+				When you select a range of numbers, the app plays them from top to bottom or from left to right, in order, ascending in pitch for larger numbers and descending for lower ones.
+				By hearing those sounds alone, you should be able to visualize the data, even with your eyes closed - that might take some practice.
+			</p>
+			<p>
+				To calculate each pitch, the app begins by finding the lowest and highest numbers in the range.
+				It maps the lowest number to the note C3 and the highest number to the note C6.
+				All the numbers in-between are mapped logarithmically to pitches between those two notes, then rounded to the nearest semitone.
+				As a result, two numbers may share the same pitch if they are sufficiently close and the selected range is sufficiently large.
+			</p>
+			<p>
+				I plan to add improvements: allow you to play from right to left or top to bottom; 
+				allow you to play multiple columns/rows of numbers simultaneously; 
+				allow you to vary the speed, volume, and pitch of playback.
+			</p>
+			<div style=" position:fixed; bottom:10%">
+				&copy; Michael Saunders 2013
+			</div>
+		</div>
+	</div>
+	<!-- Replace the following with your content -->
+   	<div class="auto-style1">
+   		<br><span class="auto-style3"><br><span class="auto-style4">Choose a row or column of numbers</span><br class="auto-style4">
+		<span class="auto-style4">to visualize them with sound.</span></span><br><br>
+   		<div id="autoplaydiv" style="visibility:visible">
+   			<input type="checkbox" value="true" id="autoplay" checked="true" onchange="refreshButton();" class="auto-style4"> 
+			<span class="auto-style5">Auto-play sounds
+   		</span>
+   		</div>
+   		
+   		<br><br>
+   	</div>
+    	
+    <div class="auto-style1">
+	
+	    <a><input type="button" value="Play Selected Range" onclick="playSelected();" id="playSelected" class="auto-style2" style="font-family: &quot;Segoe UI Semilight&quot;; background-color: #333333; color: #FFFFFF; border-width: 0px; padding: 0px; margin: 0px; width: 292px; height: 60px; visibility: visible; cursor: pointer;" /></a><br>
+	</div>
+	
+	<div id="overlay" style="background:#555; position:fixed; width:40%; height:40%; bottom:0px; right:0px; color:white; height:100%; visibility:hidden">
+	    Notes
+	</div>
+	
+    
+    <div id="tools" class="auto-style1" style="border-width: 0; border-style: none; position:fixed; bottom:15%; width:100%; z-index:2; outline-width: 0; cursor: pointer;">
+    	&nbsp;<img alt="help" height="38" src="Content/helpcircle.png" onclick="showHelp();" width="38">&nbsp;&nbsp;&nbsp;
+		<a href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=11&ct=1364351992&rver=6.1.6206.0&wp=MBI&wreply=https:%2F%2Foffice.microsoft.com%2Fwlid%2Fauthredir.aspx%3Furl%3Dhttp%253A%252F%252Foffice%252Emicrosoft%252Ecom%252Fen%252Dus%252Fstore%252FWriteReview%252Easpx%253Fai%253DWA104032712%26hurl%3D7138556AFEDB8D3D666C9D6120DCBF84%26ipt%3D1&lc=1033&id=34134">
+		<img alt="rate this app" height="38" longdesc="rate this app" src="Content/ratingcircle.png" width="38" class="auto-style6"></a>
+	</div>
+    <div id="music" style="visibility:hidden; position:fixed; height:50px">
+        
+    </div>
+	
+<div style="position:absolute;filter:alpha(opacity=0);opacity:0.001;z-index:10;">                                                                                                                                        </div></body>
+</html>
